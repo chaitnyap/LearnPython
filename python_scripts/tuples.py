@@ -1,0 +1,5 @@
+n = input()
+line = raw_input().split()
+arr = map(int, line)
+tup = tuple(arr)
+print hash(tup)
