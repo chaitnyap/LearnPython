@@ -1,0 +1,84 @@
+--------------------------------------------------------------------------------------------------------------
+#### sWAP cASE
+print (input().swapcase())
+
+
+--------------------------------------------------------------------------------------------------------------
+#### String Split and Join
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+s = raw_input().strip().split()
+s = "-".join(s)
+print s
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+print "-".join(raw_input().strip().split())
+
+
+--------------------------------------------------------------------------------------------------------------
+#### Mutations
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+s = raw_input().strip()
+i, c = raw_input().strip().split()
+i = int(i)
+s = s[:i] + c + s[i+1:]
+print s
+
+
+--------------------------------------------------------------------------------------------------------------
+#### Find a string
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+s = raw_input().strip()
+ss = raw_input()
+count = 0
+for i in range(0, len(s)):
+    pos = s.find(ss)
+    if pos >= 0:
+        count += 1
+        i += pos
+        s = s[i+1:]
+print count
+
+
+--------------------------------------------------------------------------------------------------------------
+#### String Validators
+st=input().strip()
+print (any(s.isalnum() for s in st))
+print (any(s.isalpha() for s in st))
+print (any(s.isdigit() for s in st))
+print (any(s.islower() for s in st))
+print (any(s.isupper() for s in st))
+
+
+
+--------------------------------------------------------------------------------------------------------------
+#### Text Alignment
+str.rjust()
+str.ljust()
+str.center()
+
+--------------------------------------------------------------------------------------------------------------
+#### Text Wrap
+import textwrap
+print(textwrap.fill(input(),int(input())))
+
+--------------------------------------------------------------------------------------------------------------
+#### Designer Door Mat
+
+
+--------------------------------------------------------------------------------------------------------------
+#### String Formatting
+
+
+--------------------------------------------------------------------------------------------------------------
+#### Alphabet Rangoli
+
+
+--------------------------------------------------------------------------------------------------------------
+#### Capitalize!
+
+
+--------------------------------------------------------------------------------------------------------------
+#### The Minion Game
+
+
+--------------------------------------------------------------------------------------------------------------
