@@ -1,0 +1,95 @@
+--------------------------------------------------------------------------------------------------------------
+#### Lists
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+lines = input()
+arr = list()
+for i in range(0,lines):
+    line = raw_input().split()
+    if line[0] == 'print':
+        cmd = 'print arr'
+    elif len(line) == 1:
+        cmd = 'arr.'+line[0]+'()'
+    elif len(line) == 2:
+        cmd = 'arr.'+line[0]+'('+line[1]+')'
+    elif len(line) == 3:
+        cmd = 'arr.'+line[0]+'('+line[1]+','+line[2]+')'
+    exec(cmd)
+
+--------------------------------------------------------------------------------------------------------------
+#### Tuples
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+inp = raw_input().split()
+tup = tuple(map(int, inp))
+print hash(tup)
+
+--------------------------------------------------------------------------------------------------------------
+#### Sets - Symmetric Difference
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+m = input()
+m_set = set(map(int,raw_input().strip().split()))
+n = input()
+n_set = set(map(int,raw_input().strip().split()))
+final_set = sorted(m_set.symmetric_difference(n_set))
+for i in final_set:
+    print i
+
+--------------------------------------------------------------------------------------------------------------
+#### List Comprehensions
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+X = input()
+Y = input()
+Z = input()
+n = input()
+
+result = [[x, y, z] for x in range(0, X+1) for y in range(0, Y+1) for z in range(0, Z+1) if x + y + z != n]
+print result
+
+--------------------------------------------------------------------------------------------------------------
+#### Find the Second Largest Number
+## Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+print list(sorted(set(list(map(int,raw_input().strip().split()))[:n])))[-2]
+
+
+## Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+arr = list(map(int,raw_input().strip().split()))[:n]
+print max(filter(lambda x: x != max(arr), arr))
+
+
+## Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+arr = list(map(int,raw_input().strip().split()))[:n]
+print list(sorted(set(arr)))[-2]
+
+
+## Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+arr = list(map(int,raw_input().strip().split()))[:n]
+arr = filter(lambda x: x != max(arr), arr)
+print max(arr)
+
+
+## Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+arr = list(map(int, raw_input().strip().split()))
+def f(x, y):
+    if x > y:
+        return x
+    else:
+        return y
+largest = reduce(f, arr)
+new_arr = filter(lambda x: x != largest, arr)
+print reduce(f, new_arr)
+
+--------------------------------------------------------------------------------------------------------------
+#### Nested Lists
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+marksheet = []
+for _ in range(0,int(input())):
+    marksheet.append([raw_input(), float(input())])
+second_highest = sorted(list(set([marks for name, marks in marksheet])))[1]
+print('\n'.join([a for a,b in sorted(marksheet) if b == second_highest]))
+
+--------------------------------------------------------------------------------------------------------------
