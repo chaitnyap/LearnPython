@@ -1,0 +1,120 @@
+--------------------------------------------------------------------------------------------------------------
+#### Hello World!
+#This is a single line comment
+'''
+This is 
+a 
+multiline comment
+'''
+#write your code in next line. 
+print "Hello World!"
+
+--------------------------------------------------------------------------------------------------------------
+#### Raw input
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+my_str = raw_input()
+print my_str
+
+--------------------------------------------------------------------------------------------------------------
+#### Arithmetic Operators
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def sum(a, b):
+    return a + b
+
+def diff(a, b):
+    return a - b
+
+def mult(a, b):
+    return a * b
+
+a = int(raw_input())
+b = int(raw_input())
+
+print sum(a, b)
+print diff(a, b)
+print mult(a, b)
+
+--------------------------------------------------------------------------------------------------------------
+#### Python: Division
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from __future__ import division
+
+a = float(raw_input())
+b = float(raw_input())
+
+print a // b
+print a / b
+
+--------------------------------------------------------------------------------------------------------------
+#### Mod Divmod
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from __future__ import division
+
+a = int(raw_input())
+b = int(raw_input())
+
+print a//b
+print a%b
+print divmod(a, b)
+
+--------------------------------------------------------------------------------------------------------------
+#### Power - Mod Power
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a = input()
+b = input()
+m = input()
+print pow(a, b)
+print pow(a, b, m)
+
+--------------------------------------------------------------------------------------------------------------
+#### Integers Come In All Sizes
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a = input()
+b = input()
+c = input()
+d = input()
+print a**b + c**d
+
+--------------------------------------------------------------------------------------------------------------
+#### Loops
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+i = 0
+while i != n:
+    print i**2
+    i += 1
+
+--------------------------------------------------------------------------------------------------------------
+#### What's Your Name?
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+fn = raw_input()
+ln = raw_input()
+line = "Hello " + fn + " " + ln + "! You just delved into python."
+print line
+
+--------------------------------------------------------------------------------------------------------------
+#### Interchange two numbers
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a = (input(), input())
+print a[1]
+print a[0]
+
+--------------------------------------------------------------------------------------------------------------
+#### Finding the percentage
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+students = {}
+for i in range(0,n):
+    line = raw_input()
+    temp = line.split()
+    students[temp[0]] = temp[1:]
+name = raw_input()
+avg = (float(students[name][0]) + float(students[name][1]) + float(students[name][2])) / 3.0
+print "%.2f"%avg
+
+--------------------------------------------------------------------------------------------------------------
+#### Print Function
+
+
+
+--------------------------------------------------------------------------------------------------------------
