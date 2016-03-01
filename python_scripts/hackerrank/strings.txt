@@ -56,21 +56,67 @@ str.rjust()
 str.ljust()
 str.center()
 
+
 --------------------------------------------------------------------------------------------------------------
 #### Text Wrap
 import textwrap
 print(textwrap.fill(input(),int(input())))
 
+
 --------------------------------------------------------------------------------------------------------------
 #### Designer Door Mat
+N, M = map(int,input().split()) # More than 6 lines of code will result in 0 score. Blank lines are not counted.
+for i in range(1,N,2): 
+    print ('-'*((M-(3*i))//2),'.|.'*i,'-'*((M-(3*i))//2), sep='')
+print ('-'*(M//2-3),'WELCOME','-'*(M//2-3), sep='')
+for i in range(N-2,-1,-2): 
+    print ('-'*((M-(3*i))//2),'.|.'*i,'-'*((M-(3*i))//2), sep='')
 
 
 --------------------------------------------------------------------------------------------------------------
 #### String Formatting
+N=int(input().strip())
+l=len('{:b}'.format(N))
+for i in range(1,N+1):
+    print('{:{}d}'.format(i,l), '{:{}o}'.format(i,l), '{:{}x}'.format(i,l).upper(), '{:{}b}'.format(i,l))
+
+
+N=int(input().strip())
+l=len(bin(N)) - 2
+for i in range(1,N+1):
+    print("{0:{l}d} {0:{l}o} {0:{l}X} {0:{l}b}".format(i,l=l))
 
 
 --------------------------------------------------------------------------------------------------------------
 #### Alphabet Rangoli
+import string
+
+N=int(input().strip()) #5
+al = string.ascii_lowercase
+
+for i in range(N,1,-1): #5,4,3,2
+    r=["-"]*(N*2-1) #9
+    for j in range(0,N-i+1): #0,1
+        r[N-j-1]=al[j+i-1]
+        r[N+j-1]=al[j+i-1]
+    print("-".join(r))
+
+for i in range(0,N): #0,1,2,3,4
+    r=["-"]*(N*2-1)
+    for j in range(0,N-i): #0,1,2,3,4
+        r[N-1-j]=al[j+i]
+        r[N-1+j]=al[j+i]
+    print("-".join(r))
+
+
+n = int(raw_input())
+for i in range(n):
+    s = "-".join(chr(ord('a')+n-j-1) for j in range(i+1))
+    print((s+s[::-1][1:]).center(n*4-3, '-'))
+
+for i in range(n-1):
+    s = "-".join(chr(ord('a')+n-j-1) for j in range(n-i-1))
+    print((s+s[::-1][1:]).center(n*4-3, '-'))
 
 
 --------------------------------------------------------------------------------------------------------------
